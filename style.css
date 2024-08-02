@@ -10,14 +10,24 @@ html,body{
     height: 100%;
     width: 100%;
 }
-
+#cursor{
+    height: 2.3vw;
+    width: 2.3vw;
+    border-radius: 50%; 
+    border: 2px solid rgb(239, 236, 236);
+    position: fixed;
+    z-index: 999;
+    mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
+}
 #loader{
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    padding-left: 10vw;
+    gap: 2vh;
     position: fixed;
     z-index: 999;
     background-color: #0B0B0B;
@@ -26,11 +36,6 @@ html,body{
 #main{
     position: relative;
     background-color: #000;
-}
-#page1{
-    height: 100vh;
-    width: 100%;
-    background-color: #151515;
 }
 
 .lineContent{
@@ -45,7 +50,6 @@ html,body{
     display: flex;
     justify-content: left;
     align-items: center;
-    gap: 2vw;
 }
 
 .line-one h2{
@@ -67,14 +71,17 @@ html,body{
     gap: 2vw;
 }
 
+#wait{
+    padding-left: 30vw;
+}
+
 #counter{
     width: 14vw;
     text-align: right;
 }
 
 #now{
-    width: 16vw;
-    height: 14.5vh;
+    height: 8vh;
     font-size: 6vw;
     text-transform: uppercase;
     font-weight: 900;
@@ -83,6 +90,60 @@ html,body{
     animation-name: anime;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3vw 5.5vw;
+}
+
+#navPart2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+
+#navPart2 h4{
+    font-size: 0.8vw;
+    font-weight: 500;
+}
+
+.hero h1,.hero h2{
+    font-size: 7.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7vw;
+}
+
+.hero{
+    width: 72%; 
+    margin-left: 27%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+#hero-web{
+    display: flex;
+    align-items: center;
+}
+
+#hero-web h2:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    font-weight: 500;
+}
+
+.hero:nth-child(2){
+    margin-top: 19vh;
 }
 
 @keyframes anime {
